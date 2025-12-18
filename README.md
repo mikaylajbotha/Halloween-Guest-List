@@ -22,5 +22,5 @@ A fun and interactive web application to manage a Halloween party guest list. Us
 - **JavaScript** – Handles all interactivity (adding, editing, removing, sorting, searching, likes/dislikes).  
 - **Bootstrap 4** – Responsive design and styling components.  
 
-## File Structure
+
 
