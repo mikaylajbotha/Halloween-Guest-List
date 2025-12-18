@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Guest List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Container for content with top margin -->
+    <div class="container mt-5">
+        <!-- Heading centered at the top -->
+        <h1 class="text-center">Halloween Guest List</h1>
+        
+        <div class="mb-3">
+            <!-- Label for guest name input -->
+            <label for="guestName" class="form-label">Name</label>
+            <!-- Input field for guest name -->
+            <input type="text" class="form-control" id="guestName">
+        </div>
+        
+        <div class="mb-3">
+            <!-- Label for guest character input -->
+            <label for="guestCharacter" class="form-label">Character</label>
+            <!-- Input field for guest character -->
+            <input type="text" class="form-control" id="guestCharacter">
+        </div>
+        
+        <!-- Button to add a guest -->
+        <button class="btn btn-primary mb-3" onclick="addGuest()">Add</button>
+        <!-- Button to clear all guests -->
+        <button class="btn btn-primary mb-3" onclick="clearGuests()">Clear</button>
+        <!-- Button to sort guests alphabetically -->
+        <button class="btn btn-primary mb-3" onclick="sortGuests()">Sort (A-Z)</button>
+        
+        <!-- Input field for searching guests by name -->
+        <input type="text" class="form-control mb-3" id="searchBox" oninput="searchGuest()" placeholder="Search guest by name...">
+        
+        <!-- Table to display the guest list -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <!-- Table header for guest name -->
+                    <th>Name</th>
+                    <!-- Table header for guest character -->
+                    <th>Character</th>
+                    <!-- Table header for guest likes/dislikes -->
+                    <th>Likes / Dislikes</th>
+                </tr>
+            </thead>
+            <tbody id="guestList">
+                <!-- Dynamic content area for guest list -->
+            </tbody>
+        </table>
+        
+        <div>
+            <!-- Button to display total number of guests -->
+            <button class="btn btn-primary" onclick="countGuests()">Total Number of Guests</button>
+            <!-- Span to dynamically display total guest count -->
+            <span id="guestCount"></span>
+        </div>
+        
+        <hr> <!-- Horizontal line for spacing -->
+        
+        <div>
+            <!-- Button to display most liked costume -->
+            <button class="btn btn-primary" onclick="mostLikedCostume()">Most Liked Costume</button>
+            <!-- Span to dynamically display most liked costume -->
+            <span id="likedCostume"></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script> 
+    
+</body>
+</html>

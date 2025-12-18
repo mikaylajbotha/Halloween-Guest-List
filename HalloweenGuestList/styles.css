@@ -1,0 +1,10 @@
+/* Highlights the guest with the most likes */
+.highlight {
+    background-color: #ffd700; /* Gold background color */
+}
+
+/* Styles for the table header */
+thead tr {
+    background-color: black; /* Black background color */
+    color: white; /* White text color */
+}
